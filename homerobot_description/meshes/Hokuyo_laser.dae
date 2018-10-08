@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.78.0 commit date:2016-10-24, commit time:12:20, hash:e8299c8</authoring_tool>
+    </contributor>
+    <created>2018-07-25T15:13:48</created>
+    <modified>2018-07-25T15:13:48</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">49.13434</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <YF_dofdist>0</YF_dofdist>
+          <shiftx>0</shiftx>
+          <shifty>0</shifty>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Lamp-light" name="Lamp">
+      <technique_common>
+        <point>
+          <color sid="color">1 1 1</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <adapt_thresh>0.000999987</adapt_thresh>
+          <area_shape>1</area_shape>
+          <area_size>0.1</area_size>
+          <area_sizey>0.1</area_sizey>
+          <area_sizez>1</area_sizez>
+          <atm_distance_factor>1</atm_distance_factor>
+          <atm_extinction_factor>1</atm_extinction_factor>
+          <atm_turbidity>2</atm_turbidity>
+          <att1>0</att1>
+          <att2>1</att2>
+          <backscattered_light>1</backscattered_light>
+          <bias>1</bias>
+          <blue>1</blue>
+          <buffers>1</buffers>
+          <bufflag>0</bufflag>
+          <bufsize>2880</bufsize>
+          <buftype>2</buftype>
+          <clipend>30.002</clipend>
+          <clipsta>1.000799</clipsta>
+          <compressthresh>0.04999995</compressthresh>
+          <dist sid="blender_dist">29.99998</dist>
+          <energy sid="blender_energy">1</energy>
+          <falloff_type>2</falloff_type>
+          <filtertype>0</filtertype>
+          <flag>0</flag>
+          <gamma sid="blender_gamma">1</gamma>
+          <green>1</green>
+          <halo_intensity sid="blnder_halo_intensity">1</halo_intensity>
+          <horizon_brightness>1</horizon_brightness>
+          <mode>8192</mode>
+          <ray_samp>1</ray_samp>
+          <ray_samp_method>1</ray_samp_method>
+          <ray_samp_type>0</ray_samp_type>
+          <ray_sampy>1</ray_sampy>
+          <ray_sampz>1</ray_sampz>
+          <red>1</red>
+          <samp>3</samp>
+          <shadhalostep>0</shadhalostep>
+          <shadow_b sid="blender_shadow_b">0</shadow_b>
+          <shadow_g sid="blender_shadow_g">0</shadow_g>
+          <shadow_r sid="blender_shadow_r">0</shadow_r>
+          <sky_colorspace>0</sky_colorspace>
+          <sky_exposure>1</sky_exposure>
+          <skyblendfac>1</skyblendfac>
+          <skyblendtype>1</skyblendtype>
+          <soft>3</soft>
+          <spotblend>0.15</spotblend>
+          <spotsize>75</spotsize>
+          <spread>1</spread>
+          <sun_brightness>1</sun_brightness>
+          <sun_effect_type>0</sun_effect_type>
+          <sun_intensity>1</sun_intensity>
+          <sun_size>1</sun_size>
+          <type>0</type>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images/>
+  <library_geometries>
+    <geometry id="Hokuyo_laser-mesh" name="Hokuyo laser">
+      <mesh>
+        <source id="Hokuyo_laser-mesh-positions">
+          <float_array id="Hokuyo_laser-mesh-positions-array" count="207">2.50001e-4 2.50001e-4 0.04999995 2.50001e-4 0.05024999 0.04999995 2.50001e-4 2.50001e-4 0 2.50001e-4 0.05024999 0 0.05024999 2.50001e-4 0.04999995 0.05024999 2.50001e-4 0 0.05024999 0.05024999 0.04999995 0.05024999 0.05024999 0 0.01806569 0.003927767 0.04999995 0.01365 0.005970656 0.04999995 0.03243428 0.003927767 0.04999995 0.02768266 0.002881884 0.04999995 0.02524995 0.002749979 0.04999995 0.02281731 0.002881884 0.04999995 0.009776711 0.008915066 0.04999995 0.006626963 0.01262325 0.04999995 0.00434798 0.01692187 0.04999995 0.003046393 0.0216099 0.04999995 0.00278294 0.02646809 0.04999995 0.003570079 0.03126937 0.04999995 0.005370974 0.03578919 0.04999995 0.008101344 0.03981614 0.04999995 0.01163357 0.04316204 0.04999995 0.0158025 0.04567044 0.04999995 0.04615193 0.01692187 0.04999995 0.04387295 0.01262325 0.04999995 0.02041316 0.04722392 0.04999995 0.02524995 0.04774999 0.04999995 0.03008681 0.04722392 0.04999995 0.03469747 0.04567044 0.04999995 0.0388664 0.04316204 0.04999995 0.04239863 0.03981614 0.04999995 0.045129 0.03578919 0.04999995 0.0407232 0.008915066 0.04999995 0.03684991 0.005970656 0.04999995 0.04692983 0.03126937 0.04999995 0.04771697 0.02646809 0.04999995 0.04745358 0.0216099 0.04999995 0.02768266 0.002881884 0.08999997 0.02524995 0.002749979 0.08999997 0.02281731 0.002881884 0.08999997 0.01806569 0.003927767 0.08999997 0.01365 0.005970656 0.08999997 0.009776711 0.008915066 0.08999997 0.006626963 0.01262325 0.08999997 0.00434798 0.01692187 0.08999997 0.003046393 0.0216099 0.08999997 0.00278294 0.02646809 0.08999997 0.003570079 0.03126937 0.08999997 0.005370974 0.03578919 0.08999997 0.008101344 0.03981614 0.08999997 0.01163357 0.04316204 0.08999997 0.0158025 0.04567044 0.08999997 0.02041316 0.04722392 0.08999997 0.02524995 0.04774999 0.08999997 0.03008681 0.04722392 0.08999997 0.03469747 0.04567044 0.08999997 0.0388664 0.04316204 0.08999997 0.04239863 0.03981614 0.08999997 0.045129 0.03578919 0.08999997 0.04692983 0.03126937 0.08999997 0.04771697 0.02646809 0.08999997 0.04745358 0.0216099 0.08999997 0.04615193 0.01692187 0.08999997 0.04387295 0.01262325 0.08999997 0.0407232 0.008915066 0.08999997 0.03684991 0.005970656 0.08999997 0.03243428 0.003927767 0.08999997 0.02524995 0.02524995 0.08999997</float_array>
+          <technique_common>
+            <accessor source="#Hokuyo_laser-mesh-positions-array" count="69" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Hokuyo_laser-mesh-normals">
+          <float_array id="Hokuyo_laser-mesh-normals-array" count="333">-1 0 0 0 -1 0 1 0 0 0 1 0 -2.76464e-7 0 1 0 0 1 -5.8182e-7 0 1 5.8182e-7 0 1 2.015e-7 0 1 -9.44733e-7 0 1 1.0467e-6 0 1 -7.57444e-6 0 1 1.83838e-6 0 1 2.82736e-6 0 1 -5.9169e-7 0 1 -4.61055e-7 0 1 5.009e-7 0 1 -6.42811e-7 0 1 -4.32353e-7 0 1 4.32353e-7 0 1 3.21405e-7 0 1 -1.0018e-6 0 1 4.61055e-7 0 1 4.72366e-7 0 1 2.76464e-7 0 1 -2.82735e-6 0 1 -1.83838e-6 0 1 7.57442e-6 0 1 -7.11375e-7 0 1 0 0 -1 0.05413955 -0.9985334 0 -0.05413955 -0.9985334 0 -0.05413955 -0.9985334 0 -0.2149704 -0.9766206 0 -0.2149702 -0.9766206 0 -0.4198893 -0.9075754 0 -0.419889 -0.9075756 0 -0.6051741 -0.7960932 0 -0.6051742 -0.7960932 0 -0.7621622 -0.6473863 0 -0.7621623 -0.647386 0 -0.883512 -0.4684084 0 -0.883512 -0.4684086 0 -0.9635501 -0.2675282 0 -0.9635501 -0.2675283 0 -0.9985335 -0.05413901 0 -0.9985334 -0.05413907 0 -0.9868265 0.1617821 0 -0.9868265 0.1617822 0 -0.9289768 0.3701379 0 -0.9289769 0.370138 0 -0.827689 0.561187 0 -0.8276889 0.5611873 0 -0.6876992 0.7259958 0 -0.6876991 0.7259958 0 -0.5155547 0.8568567 0 -0.5155543 0.856857 0 -0.3193011 0.9476534 0 -0.3193011 0.9476534 0 -0.1081197 0.994138 0 -0.1081197 0.994138 0 0.1081197 0.994138 0 0.1081197 0.994138 0 0.3193011 0.9476534 0 0.3193011 0.9476534 0 0.5155547 0.8568567 0 0.5155545 0.8568568 0 0.6876998 0.7259952 0 0.6876984 0.7259966 0 0.8276891 0.5611872 0 0.8276889 0.5611873 0 0.928977 0.3701376 0 0.928977 0.3701376 0 0.9868264 0.1617827 0 0.9868264 0.1617828 0 0.9985335 -0.05413931 0 0.9985334 -0.05413931 0 0.9635503 -0.2675275 0 0.9635499 -0.2675287 0 0.883512 -0.4684085 0 0.8835124 -0.4684078 0 0.7621625 -0.6473859 0 0.7621611 -0.6473875 0 0.6051735 -0.7960937 0 0.6051746 -0.7960928 0 0.4198895 -0.9075753 0 0.419889 -0.9075756 0 0.2149702 -0.9766206 0 0.2149705 -0.9766206 0 0.05413955 -0.9985334 0 5.45013e-6 0 1 -5.45013e-6 0 1 -2.13942e-6 0 1 1.60457e-6 0 1 -2.67428e-7 0 1 5.34856e-7 0 1 -1.06971e-6 0 1 5.34855e-7 0 1 -2.13942e-6 0 1 5.34855e-7 0 1 5.34856e-7 0 1 4.27884e-6 0 1 -2.27314e-6 0 1 2.27314e-6 0 1 -5.34855e-7 0 1 -5.34855e-7 0 1 -5.34855e-7 0 1 2.13942e-6 0 1 -5.34856e-7 0 1 2.67428e-7 0 1 -1.60457e-6 0 1</float_array>
+          <technique_common>
+            <accessor source="#Hokuyo_laser-mesh-normals-array" count="111" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Hokuyo_laser-mesh-vertices">
+          <input semantic="POSITION" source="#Hokuyo_laser-mesh-positions"/>
+        </vertices>
+        <polylist count="134">
+          <input semantic="VERTEX" source="#Hokuyo_laser-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Hokuyo_laser-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 1 0 2 0 2 0 1 0 3 0 4 1 0 1 5 1 5 1 0 1 2 1 6 2 4 2 7 2 7 2 4 2 5 2 1 3 6 3 3 3 3 3 6 3 7 3 0 4 8 4 9 4 10 5 11 5 4 5 4 6 11 6 12 6 4 5 12 5 0 5 0 7 12 7 13 7 0 8 13 8 8 8 9 9 14 9 0 9 0 5 14 5 15 5 0 10 15 10 16 10 16 5 17 5 0 5 0 11 17 11 18 11 0 12 18 12 1 12 1 13 18 13 19 13 1 14 19 14 20 14 20 5 21 5 1 5 1 15 21 15 22 15 1 16 22 16 23 16 24 5 25 5 4 5 23 17 26 17 1 17 1 18 26 18 27 18 1 5 27 5 6 5 6 19 27 19 28 19 6 20 28 20 29 20 29 21 30 21 6 21 6 22 30 22 31 22 6 5 31 5 32 5 25 5 33 5 4 5 4 23 33 23 34 23 4 24 34 24 10 24 32 5 35 5 6 5 6 25 35 25 36 25 6 26 36 26 4 26 4 27 36 27 37 27 4 28 37 28 24 28 7 29 5 29 3 29 3 29 5 29 2 29 38 30 39 30 12 30 12 31 39 31 13 31 39 32 40 32 13 32 13 33 40 33 41 33 13 34 41 34 8 34 8 35 41 35 42 35 8 36 42 36 9 36 9 37 42 37 43 37 9 38 43 38 14 38 14 39 43 39 44 39 14 40 44 40 15 40 15 41 44 41 45 41 15 42 45 42 16 42 16 43 45 43 46 43 16 44 46 44 17 44 17 45 46 45 47 45 17 46 47 46 18 46 18 47 47 47 48 47 18 48 48 48 19 48 19 49 48 49 49 49 19 50 49 50 20 50 20 51 49 51 50 51 20 52 50 52 21 52 21 53 50 53 51 53 21 54 51 54 22 54 22 55 51 55 52 55 22 56 52 56 23 56 23 57 52 57 53 57 23 58 53 58 26 58 26 59 53 59 54 59 26 60 54 60 27 60 27 61 54 61 55 61 27 62 55 62 28 62 28 63 55 63 56 63 28 64 56 64 29 64 29 65 56 65 57 65 29 66 57 66 30 66 30 67 57 67 58 67 30 68 58 68 31 68 31 69 58 69 59 69 31 70 59 70 32 70 32 71 59 71 60 71 32 72 60 72 35 72 35 73 60 73 61 73 35 74 61 74 36 74 36 75 61 75 62 75 36 76 62 76 37 76 37 77 62 77 63 77 37 78 63 78 24 78 24 79 63 79 64 79 24 80 64 80 25 80 25 81 64 81 65 81 25 82 65 82 33 82 33 83 65 83 66 83 33 84 66 84 34 84 34 85 66 85 67 85 34 86 67 86 10 86 10 87 67 87 38 87 10 88 38 88 11 88 11 89 38 89 12 89 41 5 40 5 68 5 68 90 40 90 39 90 68 91 39 91 38 91 44 92 43 92 68 92 68 93 43 93 42 93 68 94 42 94 41 94 47 5 46 5 68 5 68 95 46 95 45 95 68 5 45 5 44 5 50 96 49 96 68 96 68 5 49 5 48 5 68 97 48 97 47 97 53 98 52 98 68 98 68 99 52 99 51 99 68 100 51 100 50 100 56 101 55 101 68 101 68 102 55 102 54 102 68 103 54 103 53 103 59 5 58 5 68 5 68 104 58 104 57 104 68 105 57 105 56 105 62 5 61 5 68 5 68 106 61 106 60 106 68 5 60 5 59 5 65 107 64 107 68 107 68 5 64 5 63 5 68 108 63 108 62 108 38 107 67 107 68 107 68 109 67 109 66 109 68 110 66 110 65 110</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.481132 0.7276763 0.3054208 -0.6141704 -6.50764 0 0.8953956 0.4452714 5.343665 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Lamp" name="Lamp" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Lamp-light"/>
+      </node>
+      <node id="Hokuyo_laser" name="Hokuyo_laser" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Hokuyo_laser-mesh" name="Hokuyo_laser"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

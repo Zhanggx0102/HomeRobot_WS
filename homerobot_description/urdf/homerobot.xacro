@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<robot name="homerobot_robot" xmlns:xacro="http://ros.org/wiki/xacro"
+                          xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+    	                    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+    	                    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
+<!-- Include materials -->
+
+    <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="Red">
+        <color rgba="0.8 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="White">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+
+    <material name="orange">
+         <color rgba="1 0.43 0 1"/>
+    </material>
+
+    <material name="yellow">
+         <color rgba="0 1 1 1"/>
+    </material>
+
+    <material name="blue">
+      <color rgba="0 0 0.9 1"/>
+    </material>
+
+    <material name="green">
+      <color rgba="0.22 0.37 0.056 1"/>
+    </material>
+
+<!-- Constants -->
+    <property name="deg_to_rad" value="0.01745329251994329577"/>
+    <property name="M_PI" value="3.141593"/>
+
+<!-- inertial matrix macro definition -->
+   <xacro:macro name="inertial_matrix" params="mass">
+      <inertial>
+      	<mass value="${mass}" />
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+   </xacro:macro>
+
+<!-- transmission block macro definition -->
+    <xacro:macro name="transmission_block" params="joint_name">
+	  <transmission name="tran1">
+	    <type>transmission_interface/SimpleTransmission</type>
+	    <joint name="${joint_name}">
+	      <hardwareInterface>PositionJointInterface</hardwareInterface>
+	    </joint>
+	    <actuator name="motor1">
+	      <hardwareInterface>PositionJointInterface</hardwareInterface>
+	      <mechanicalReduction>1</mechanicalReduction>
+	    </actuator>
+	  </transmission>
+    </xacro:macro>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- base_footprint LINK -->
+  <link name="base_footprint">
+   		<visual>
+			<geometry>
+      				<box size="0.001 0.001 0.001"/>
+     			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+   		</visual>
+		<!--  <xacro:inertial_matrix mass="0.0001"/> -->
+ 	</link>
+
+  <joint name="base_footprint_joint" type="fixed"> 
+		<origin xyz="0 0 0.084" />
+		<parent link="base_footprint" />
+		<child link="base_link" />
+	</joint>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- BASE LINK -->
+  <link name="base_link">
+  	<visual>
+          <origin xyz="0.0 0.0 0.0" rpy="0 0 0" /> 
+        	<geometry>
+	        	<mesh filename="package://homerobot_description/meshes/base_link.dae"/>
+        	</geometry>
+      		<material name="green" />
+  	</visual>
+
+  	<collision>
+        	<origin xyz="0.0 0.0 0.0" rpy="0 0 0" /> 
+        	<geometry>
+	        	  <mesh filename="package://homerobot_description/meshes/base_link.dae"/>
+        	</geometry>
+    </collision>
+
+    <xacro:inertial_matrix mass="5"/>
+
+  </link>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- L_B_Wheel link and joint -->
+<joint name="L_Wheel_joint" type="continuous">  
+    <parent link="base_link"/>
+    <child link="L_Wheel_link"/>
+    <origin xyz="-0.075 0.1885 -0.034" rpy="1.5707963 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="100" velocity="100"/>
+    <!-- velocity: m/s for prismatic, rad/s for revolute -->
+    <!-- <dynamics damping="50" friction="1"/> -->
+    <dynamics damping="0.1" friction="0.5"/>
+    <!-- friction: N for prismatic joints, N.m for revolute joints -->
+</joint>
+
+
+<link name="L_Wheel_link">
+  	<visual>
+          <origin xyz="0.0 0.0 0.0" rpy="0 0 0" /> 
+        	<geometry>
+	        	<mesh filename="package://homerobot_description/meshes/L_wheel.dae"/>
+        	</geometry>
+      		<material name="Black" />
+  	</visual>
+
+  	<collision>
+        	<origin xyz="0.0 0.0 0.0" rpy="0 0 0" /> 
+        	<geometry>
+	        	  <mesh filename="package://homerobot_description/meshes/L_wheel.dae"/>
+        	</geometry>
+    </collision>
+
+    <xacro:inertial_matrix mass="1"/>
+
+</link>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- R_Wheel link and joint -->
+<joint name="R_Wheel_joint" type="continuous">  
+    <parent link="base_link"/>
+    <child link="R_Wheel_link"/>
+    <origin xyz="-0.075 -0.1885 -0.034" rpy="-1.5707963 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="100" velocity="100"/>
+    <!-- velocity: m/s for prismatic, rad/s for revolute -->
+    <!-- <dynamics damping="50" friction="1"/> -->
+    <dynamics damping="0.1" friction="0.5"/>
+    <!-- friction: N for prismatic joints, N.m for revolute joints -->
+</joint>
+
+<link name="R_Wheel_link">
+  	<visual>
+          <origin xyz="0.0 0.0 0.0" rpy="0 0 0" /> 
+        	<geometry>
+	        	<mesh filename="package://homerobot_description/meshes/R_wheel.dae"/>
+        	</geometry>
+      		<material name="Black" />
+  	</visual>
+
+  	<collision>
+        	<origin xyz="0.0 0.0 0.0" rpy="0 0 0" /> 
+        	<geometry>
+	        	  <mesh filename="package://homerobot_description/meshes/R_wheel.dae"/>
+        	</geometry>
+    </collision>
+
+    <xacro:inertial_matrix mass="1"/>
+
+</link>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- rplidar Laser joint and link-->
+  <joint name="rplidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="rplidar_link"/>
+    <!--
+    <origin xyz="0.175 0.05 0.15" rpy="0 0 0"/>
+    -->
+    <origin xyz="0.12594 0.0 0.3934" rpy="0 0 0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="rplidar_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="1.5707963 0 0"/>
+      <geometry>
+        <mesh filename="package://homerobot_description/meshes/rplidar_A1.dae"/>
+      </geometry>
+      <material name="Black" />
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="1.5707963 0 0"/>
+      <geometry>
+	      <mesh filename="package://homerobot_description/meshes/rplidar_A1.dae"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- Camera joint and link-->
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.175 0 0.15" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+  </joint>
+
+  <link name="camera_link">
+    <visual>
+      <origin xyz="-0.025 -0.025 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://homerobot_description/meshes/Camera.dae"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="-0.025 -0.025 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://homerobot_description/meshes/Camera.dae"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  <xacro:include filename="$(find homerobot_description)/urdf/homerobot.gazebo" />
+
+</robot>
+

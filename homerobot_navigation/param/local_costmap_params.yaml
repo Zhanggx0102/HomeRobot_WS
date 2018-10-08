@@ -1,0 +1,34 @@
+local_costmap:
+  global_frame: /map
+  robot_base_frame: /base_footprint
+  update_frequency: 5.0
+  #Refer to  global_costmap_params.yaml
+
+
+  publish_frequency: 2.0
+  #This determines the frequency for publishing information
+
+  static_map: false
+  #Refer to  global_costmap_params.yaml
+
+  rolling_window: true
+  #This is used to keep the costmap centered on the robot when it is moving around the world.
+  width: 5.0
+  height: 5.0
+  resolution: 0.02
+
+
+  tranform_tolerance: 0.5
+  #confgures the maximum latency for the transforms, in this case 0.5 seconds. 
+
+  planner_frequency: 1.0
+  #This confgure the rate in Hz at which to run the planning loop, before space-clearing operations are performed
+
+
+  planner_patiente: 5.0
+  #This confgures how long the planner will wait in seconds in an attempt to fnd a valid plan.
+
+
+#plugins:
+# {name: obstacles, type: "costmal_2d::ObstacleLayer",
+# name: inflation, type: "costmal_2d::InflationLayer"}

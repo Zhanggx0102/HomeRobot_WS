@@ -1,0 +1,12 @@
+global_costmap:
+  global_frame: /map
+  robot_base_frame: /base_footprint
+  #This defne the transformation between the map and the robot.
+  #This transformation is for the global costmap
+
+  update_frequency: 1.5
+  #This set the frequency of updates for the costmap.(here is 1Hz)
+
+  static_map: true
+  #This is used for the global costmap to see whether a map or the map server is used to initialize the costmap. 
+  #If you aren't using a static map, set this parameter to false.
