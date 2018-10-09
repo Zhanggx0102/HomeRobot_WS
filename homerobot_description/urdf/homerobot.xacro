@@ -106,7 +106,7 @@
     <parent link="base_link"/>
     <child link="L_Wheel_link"/>
     <origin xyz="-0.075 0.1885 -0.034" rpy="1.5707963 0 0" />
-    <axis xyz="0 0 1" />
+    <axis xyz="0 0 -1" />
     <limit effort="100" velocity="100"/>
     <!-- velocity: m/s for prismatic, rad/s for revolute -->
     <!-- <dynamics damping="50" friction="1"/> -->

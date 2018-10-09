@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /RobotModel1
         - /RobotModel1/Links1
-        - /RobotModel1/Links1/base_link1
       Splitter Ratio: 0.5
     Tree Height: 622
   - Class: rviz/Selection
@@ -60,23 +59,18 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
-        L_B_Wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        L_F_Wheel_link:
+        L_Wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         Link Tree Style: Links in Alphabetic Order
-        R_B_Wheel_link:
+        R_Wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        R_F_Wheel_link:
+        base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -86,9 +80,14 @@ Visualization Manager:
           Show Axes: true
           Show Trail: false
           Value: true
-        hokuyo_link:
+        camera_link:
           Alpha: 1
           Show Axes: false
+          Show Trail: false
+          Value: true
+        rplidar_link:
+          Alpha: 1
+          Show Axes: true
           Show Trail: false
           Value: true
       Name: RobotModel
@@ -135,22 +134,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.02569
+      Distance: 0.731505
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.0522633
-        Y: 0.120602
-        Z: 0.158098
+        X: 0.0566091
+        Y: 0.240617
+        Z: 0.243011
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.300397
+      Pitch: 0.325397
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.15039
+      Yaw: 0.97539
     Saved: ~
 Window Geometry:
   Displays:
