@@ -1,0 +1,25 @@
+obstacle_range: 2.5
+#This is used for the obstacles
+#If the robot detects an obstacle closer than 2.5 meters in our case, it will put the obstacle in the costmap
+
+raytrace_range: 3.0
+#This is used to clean/clear the costmap and update the free space in it when the robot moves
+
+footprint: [[-0.2,-0.2],[-0.2,0.2], [0.2, 0.2], [0.2,-0.2]]
+# This is used to indicate the geometry of the robot to the navigation stack
+
+
+#robot_radius: ir_of_robot
+inflation_radius: 0.5
+#This value given to keep a minimal distance between the geometry of the robot and the obstacles
+
+cost_scaling_factor: 10.0
+#This modifes the behavior of the robot around the obstacles.(aggressive or conservative)
+
+
+observation_sources: scan
+# This set the sensors used by the navigation stack to get the data from the real world and calculate the path.
+
+
+scan: {sensor_frame: base_link,  observation_persistence: 0.0, max_obstacle_height: 0.4, min_obstacle_height: 0.0, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
+#This confgure the sensor's frame and the uses of the data
